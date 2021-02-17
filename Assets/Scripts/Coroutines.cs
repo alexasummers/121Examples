@@ -9,10 +9,10 @@ public class Coroutines : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(OurCoroutine(goal));
+        StartCoroutine(ReachRed(goal));
     }
 
-    IEnumerator OurCoroutine(Transform goal)
+    IEnumerator ReachRed(Transform goal)
     {
         while (Vector3.Distance(transform.position, goal.position) > 0.05f)
         {
@@ -21,11 +21,11 @@ public class Coroutines : MonoBehaviour
             yield return null;
         }
 
-        print ("You reached the goal.");
+        print ("You reached the red!");
 
         yield return new WaitForSeconds(3f);
         
-        print("OurCoroutine has completed.");
+        print("The coroutine has completed.");
     }
 
    
