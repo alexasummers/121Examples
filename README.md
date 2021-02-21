@@ -6,3 +6,5 @@ Contains:
 -Arrays
 -Enums
 -Coroutines
+-Character Controller
+-Rigidbody Controller
