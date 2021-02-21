@@ -12,9 +12,10 @@ public class Coroutines : MonoBehaviour
         StartCoroutine(ReachRed(goal));
     }
 
+
     IEnumerator ReachRed(Transform goal)
     {
-        while (Vector3.Distance(transform.position, goal.position) > 0.05f)
+        while (Vector3.Distance(transform.position, goal.position) > 0.0f)
         {
             transform.position = Vector3.Lerp(transform.position, goal.position, movement * Time.deltaTime);
 
