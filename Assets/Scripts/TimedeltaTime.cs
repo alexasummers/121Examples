@@ -8,6 +8,6 @@ public class TimedeltaTime : MonoBehaviour
 
     void Update()
     {
-        transform.Translate (speed * Time.deltaTime, 0, 0);
+        transform.Translate (speed * Time.deltaTime, 0, 0); //creates equal movement regardless of different fps rates
     }
 }

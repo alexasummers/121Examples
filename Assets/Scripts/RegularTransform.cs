@@ -8,6 +8,6 @@ public class RegularTransform : MonoBehaviour
     
     void Update()
     {
-        transform.Translate (speed, 0, 0);
+        transform.Translate (speed, 0, 0); //translate in the x direction at a constant speed of 5
     }
 }

@@ -10,7 +10,7 @@ public class Enum : MonoBehaviour
    public GameObject Capsule;
    public GameObject Cylinder;
 
-    public enum ShapeName
+    public enum ShapeName //All possible states
     {
         Sphere,
         Cube,
@@ -18,55 +18,55 @@ public class Enum : MonoBehaviour
         Cylinder
     }
 
-    public ShapeName currentShape;
+    public ShapeName currentShape; //causes enumerator to show up in the inspector
 
     void Start()
     {
-        currentShape = ShapeName.Cube;
+        currentShape = ShapeName.Cube; //start with the Cube
     }
 
     void Update()
-    {
-            switch (currentShape)
+    { //switch the state of my enumerator based on what is selected from the dropdown
+            switch (currentShape) 
             {
-                case ShapeName.Cube:
+                case ShapeName.Cube: //when cube is selected
                     { 
-                        Sphere.SetActive(false);
+                        Cube.SetActive(true); //set the cube active
                         Capsule.SetActive(false);
                         Cylinder.SetActive(false);
-                        Cube.SetActive(true);
+                        Sphere.SetActive(false);
                     }
             break;
 
-                case ShapeName.Sphere:
+                case ShapeName.Sphere: //when sphere is selected
                     {
                         Cube.SetActive(false);
                         Capsule.SetActive(false);
                         Cylinder.SetActive(false);
-                        Sphere.SetActive(true);
+                        Sphere.SetActive(true); //set the sphere active
                  }
             break;
 
-            case ShapeName.Capsule:
+            case ShapeName.Capsule: //when  capsule is selected
                     {
                         Cube.SetActive(false);
-                        Capsule.SetActive(true);
+                        Capsule.SetActive(true); //set capsule active
                         Cylinder.SetActive(false);
                         Sphere.SetActive(false);
                  }
             break;
 
-            case ShapeName.Cylinder:
+            case ShapeName.Cylinder: //when cylinder is selected
                     {
                         Cube.SetActive(false);
                         Capsule.SetActive(false);
-                        Cylinder.SetActive(true);
+                        Cylinder.SetActive(true); //set cylinder active
                         Sphere.SetActive(false);
                  }
             break;
             }
         
- }
+    }
 
   
 }
