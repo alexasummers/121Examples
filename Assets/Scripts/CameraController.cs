@@ -18,6 +18,6 @@ public class CameraController : MonoBehaviour
    {
        float movement = Input.GetAxis("Mouse X") * _mouseMovement * Time.deltaTime; //multiplying horizontal mouse movement by our mouse movement speed
 
-       parent.Rotate(Vector3.up, movement); //rotate parent around vector3 up axis, controlled by the mouse movement
-   }
+        parent.Rotate(Vector3.up, movement); //rotate parent around vector3 up axis, controlled by the mouse movement
+        }
 }

@@ -197,10 +197,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 285961605}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: debe7be2c8b082b4598921e2979c7460, type: 3}
+  m_Script: {fileID: 11500000, guid: dd42252ee7cb3a845a0da3df24a11f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mouseMovement: 500
+  _mouseMovement: 5
+  parent: {fileID: 1274586626}
+  camera: {fileID: 285961606}
 --- !u!81 &285961608
 AudioListener:
   m_ObjectHideFlags: 0
@@ -838,6 +840,10 @@ PrefabInstance:
     - target: {fileID: 100050, guid: ba24e610e0a338545b447ff44a3cf1cc, type: 3}
       propertyPath: m_Name
       value: ToonRTS_demo_Knight
+      objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: ba24e610e0a338545b447ff44a3cf1cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: ba24e610e0a338545b447ff44a3cf1cc, type: 3}
       propertyPath: m_RootOrder
