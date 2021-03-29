@@ -25,7 +25,7 @@ public class FirstPersonController : MonoBehaviour
         Movement(); //see function on line 45
 
 
-        if (Input.GetButtonDown("Jump") && _groundedPlayer) //predefined jump in Unity-- paired with space bar
+        if (Input.GetButton("Jump") && _groundedPlayer) //predefined jump in Unity-- paired with space bar
         {
             Jump(); //defined on line 94
         }
