@@ -13,8 +13,8 @@ public class CameraControllerWithRange : MonoBehaviour
 
    private void Start() 
    {
-       parent = transform.parent;
-       camera = transform;
+       parent = transform.parent; //accessing the parent of the object the script is currently on
+       camera = transform; //accessing the object the script is currently on
        Cursor.lockState = CursorLockMode.Locked; //locks mouse to the center of the screen
    }
 
@@ -28,15 +28,15 @@ public class CameraControllerWithRange : MonoBehaviour
 
         cameraClamp -= rotationY; //clamping up/down camera rotation
 
-        Vector3 rotationCamera = camera.transform.rotation.eulerAngles;       
-        Vector3 rotationModel = parent.transform.rotation.eulerAngles;
+        Vector3 rotationCamera = camera.transform.rotation.eulerAngles; //accessing regular x/y/z rotation of camera
+        Vector3 rotationModel = parent.transform.rotation.eulerAngles; //accessing regular x/y/z rotation of model
 
 
-        rotationCamera.x -= rotationY;
-        rotationCamera.z = 0;
-        rotationModel.y += rotationX;
+        rotationCamera.x -= rotationY; //rotate the camera
+        rotationCamera.z = 0; //no change
+        rotationModel.y += rotationX; //rotate the model
 
-        if (cameraClamp > 90) {
+        if (cameraClamp > 90) { //clamp for vertical movement of camera -- 90 degrees/-90 degrees
             cameraClamp = 90;
             rotationCamera.x = 90;
         }
