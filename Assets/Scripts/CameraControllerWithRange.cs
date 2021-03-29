@@ -46,8 +46,8 @@ public class CameraControllerWithRange : MonoBehaviour
             rotationCamera.x = 270;
         }
 
-        camera.rotation = Quaternion.Euler(rotationCamera);       
-        parent.rotation = Quaternion.Euler(rotationModel);
+        camera.rotation = Quaternion.Euler(rotationCamera); //Z axis, X axis and Y axis (in order)
+        parent.rotation = Quaternion.Euler(rotationModel); //Z axis, X axis and Y axis (in order)
         
    }
 }
