@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
 
     private Transform parent; //reference to our parent object
     private Camera _fpsCamera;
+    float cameraClamp = 0f;
 
    private void Start() 
    {
